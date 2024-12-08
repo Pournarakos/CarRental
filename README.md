@@ -35,7 +35,8 @@ A web-based car rental project developed for the **Web Programming** course in t
 4. Create a database named:
 5. Import the `.sql` file from the project folder into the database (this sets up all tables and fields).  
 6. Open the project folder in **Visual Studio Code** (or your preferred platform).  
-7. **Modify Configuration**:  
+7. **Modify Configuration**:
+8. 
 - In the `app.js` and `pageController.js` files:  
   - **Comment out** these lines:  
     ```javascript
@@ -59,6 +60,7 @@ A web-based car rental project developed for the **Web Programming** course in t
 9. Run the following command:  
 ```bash
 npm run start
-
+```bash
 Open a browser (Firefox preferred) and visit:
-**localhost:3000**
+localhost:3000
+
