@@ -60,7 +60,7 @@ A web-based car rental project developed for the **Web Programming** course in t
 9. Run the following command:  
 ```bash
 npm run start
-```bash
+
 Open a browser (Firefox preferred) and visit:
 localhost:3000
 
