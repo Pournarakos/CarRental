@@ -1,0 +1,24 @@
+{
+    "cars":[
+        {"category": "1", "id": "0","imgSrc":"/media/mercedes-benz-s-class.png", "model": "Mercedes S 350", "doors": "4", "passengers": "5", "fuel": "Diesel", "gear":"Automatic", "ac": "Yes", "luggage": "2 Small Bags", "price":"59"},
+        {"category": "1", "id": "1","imgSrc":"/media/bmw-7-series.png", "model": "BMW-7Series", "doors": "4", "passengers": "5", "fuel": "Petrol", "gear":"Automatic", "ac": "Yes", "luggage": "2 Small Bags", "price":"65"},
+        {"category": "1", "id": "2","imgSrc":"/media/jaguar-xj.png", "model": "Jaguar XJ", "doors": "4", "passengers": "5", "fuel": "Diesel", "gear":"Automatic", "ac": "Yes", "luggage": "2 Small Bags", "price":"69"},
+        {"category": "1", "id": "3","imgSrc":"/media/lexus-ls.png", "model": "Lexus LS", "doors": "4", "passengers": "5", "fuel": "Petrol", "gear":"Automatic", "ac": "Yes", "luggage": "2 Small Bags", "price":"55"},
+        {"category": "2", "id": "4","imgSrc":"/media/citroen-c1-3d-grau-2020.png", "model": "Citroen C1", "doors": "2", "passengers":"2", "fuel": "Diesel", "gear":"Manual", "ac": "Yes", "luggage": "2 Small Bags", "price":"39"},
+        {"category": "2", "id": "5","imgSrc":"/media/fiat-500-2d-weiss-2020.png", "model": "Fiat 500", "doors": "2", "passengers": "4", "fuel": "Petrol", "gear":"Manual", "ac": "Yes", "luggage": "2 Small Bags", "price":"29"},
+        {"category": "2", "id": "6","imgSrc":"/media/mini-one-3d-ivory-2016.png", "model": "Mini One", "doors": "3", "passengers": "4", "fuel": "Diesel", "gear":"Manual", "ac": "Yes", "luggage": "2 Small Bags", "price":"35"},
+        {"category": "2", "id": "7","imgSrc":"/media/bmw-2er-activ-tourer-schwarz-2018.png", "model": "Bmw Serie 2", "doors": "4", "passengers":"4", "fuel": "Petrol", "gear":"Manual", "ac": "Yes", "luggage": "2 Small Bags", "price":"42"},
+        {"category": "3", "id": "8","imgSrc":"/media/mb-glc-5d-weiss-2020.png", "model": "Mercedes-Benz GLC", "doors": "4", "passengers": "5", "fuel": "Diesel", "gear":"Automatic", "ac": "Yes", "luggage": "2 Small Bags", "price":"45"},
+        {"category": "3", "id": "9","imgSrc":"/media/chevrolet-suburban-5d-schwarz-2016.png", "model": "Chevrolet Suburban", "doors": "4", "passengers": "7", "fuel": "Petrol", "gear":"Automatic", "ac": "Yes", "luggage": "2 Small Bags", "price":"45"},
+        {"category": "3", "id": "10","imgSrc":"/media/jeep-grand-cherokee-srt-5d-rot-2014.png", "model": "Jeep Grand Cherokee", "doors": "4", "passengers": "5", "fuel": "Diesel", "gear":"Automatic", "ac": "Yes", "luggage": "2 Small Bags", "price":"49"},
+        {"category": "3", "id": "11","imgSrc":"/media/land-rover-range-rover-velar-5d-silber-2018.png", "model": "Rarnge Rover Velar", "doors": "4", "passengers": "4", "fuel": "Petrol", "gear":"Automatic", "ac": "Yes", "luggage": "2 Small Bags", "price":"52"},
+        {"category": "4", "id": "12","imgSrc":"/media/citroen-spacetourer-van-beige-2016.png", "model": "Citroen Spacetouer", "doors": "5", "passengers": "9", "fuel": "Diesel", "gear":"Manual", "ac": "Yes", "luggage": "2 Small Bags", "price":"179"},
+        {"category": "4", "id": "13","imgSrc":"/media/chevrolet-express-van-grau-2015.png", "model": "Mercedes-Benz GLC", "doors": "4", "passengers": "12", "fuel": "Diesel", "gear":"Automatic", "ac": "Yes", "luggage": "2 Small Bags", "price":"189"},
+        {"category": "4", "id": "14","imgSrc":"/media/vw-t6-van-schwarz-2017.png", "model": "VW Transporter", "doors": "4", "passengers": "9", "fuel": "Diesel", "gear":"Manual", "ac": "Yes", "luggage": "2 Small Bags", "price":"159"},
+        {"category": "4", "id": "15","imgSrc":"/media/peugeot-traveller-van-grau-2017.png", "model": "Peugeot Traveller", "doors": "5", "passengers": "9", "fuel": "Diesel", "gear":"Manual", "ac": "Yes", "luggage": "2 Small Bags", "price":"199"},
+        {"category": "5", "id": "16","imgSrc":"/media/vw-beetle-cabrio-schwarz-offen-2017.png", "model": "VW Beetle Convertible", "doors": "2", "passengers": "4", "fuel": "Diesel", "gear":"Automatic", "ac": "Yes", "luggage": "2 Small Bags", "price":"45"},
+        {"category": "5", "id": "17","imgSrc":"/media/buick-cascada-cabrio-4d-blau-offen-2016.png", "model": "Buick Cascada", "doors": "2", "passengers": "4", "fuel": "Petrol", "gear":"Manual", "ac": "Yes", "luggage": "2 Small Bags", "price":"49"},
+        {"category": "5", "id": "18","imgSrc":"/media/fiat-500-cabrio-2d-weiss-2013.png", "model": "Fiat 500C", "doors": "4", "passengers": "2", "fuel": "Petrol", "gear":"Manual", "ac": "Yes", "luggage": "2 Small Bags", "price":"45"},
+        {"category": "5", "id": "19","imgSrc":"/media/mini-cooper-cabrio-2d-weiss-offen-2018.png", "model": "Mini One Cabrio", "doors": "3", "passengers": "4", "fuel": "Petrol", "gear":"Manual", "ac": "Yes", "luggage": "2 Small Bags", "price":"49"}
+    ]
+  }

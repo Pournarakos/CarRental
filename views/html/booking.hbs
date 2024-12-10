@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/bookingstyle.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/0adc034a85.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
+    
+</head>
+<body >
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+          <a class="navbar-brand" href="/">Car Rental Project</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul  class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            {{#if notloggedin}}
+            <li class="nav-item">
+              <a class="nav-link" href="/signin">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup">Sign Up</a>
+            </li>
+            {{/if}}
+            {{#if loggedin}}
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Log out</a>
+              </li>
+            {{/if}}
+          </ul>
+        </div>
+        
+    </nav>
+
+    <div class="formMainpage">
+      <div>
+        <p class="pb-5"></p>
+      </div>
+      <div class="container progressCont">
+        
+        <div class="row well" >
+          <ul id="progressbar" class="progressbar list-group list-group-horizontal-lg">
+            <li class="list-group-item">Step 1
+              <div class="progress">
+                <div class="progress-bar progress-bar-success stepbar" role="progressbar" aria-valuenow="40"
+                aria-valuemin="0" aria-valuemax="100" style="width: 100%; background-color: rgba(58, 83, 155, 0.65) !important;"></div>
+              </div>
+            </li>
+            <li class="list-group-item">Step 2
+              <div class="progress">
+                <div class="progress-bar progress-bar-success stepbar" role="progressbar" aria-valuenow="40"
+                aria-valuemin="0" aria-valuemax="100" ></div>
+              </div>
+            </li>
+            <li class="list-group-item">Step 3
+              <div class="progress">
+                <div class="progress-bar progress-bar-success stepbar" role="progressbar" aria-valuenow="40"
+                aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
+            <li class="list-group-item">Step 4
+              <div class="progress">
+                <div class="progress-bar progress-bar-success stepbar" role="progressbar" aria-valuenow="40"
+                aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <!--to fill the progress bar 40%-> style="width:40%" -->
+            </li>            
+          </ul>
+        </div>
+  
+      </div>
+  {{!-- {{#params}}{{price}}{{/params}} --}}
+      <div class="container bookingForm">
+        <form id="bookingForm" action="/formsRoutes/booking" method="POST">
+  
+          <div class="form-row">
+            <h3 id="bookNow">Book Now!</h3>
+          </div>
+  
+          <div class="tab">
+            <div class="form-row">
+              <h3>Date And Time</h3>
+            </div>
+            <div class="form-row">
+                <label for="PickUpLoc">Pick up location</label>
+                <select class="form-control text-center" id="PickUpLoc" name="PickLocation">
+                    <option class="ddm2">Athens</option>
+                    <option class="ddm2">Patra</option>
+                    <option class="ddm2">Thessaloniki</option>
+                </select>
+            </div>
+            <div class="form-row ">
+                <label for="PickUpDate">Pick up Date</label>
+                <input type="date" class="form-control datest" id="PickUpDate" name="PickDate">
+            </div>
+  
+  
+            <div class="form-row ">
+                <label for="DropOffLoc ">Pick up location</label>
+                <select class="form-control text-center" id="DropOffLoc" name="DropLocation">
+                    <option class="ddm2">Athens</option>
+                    <option class="ddm2">Patra</option>
+                    <option class="ddm2">Thessaloniki</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="DropOffDate">Drop off Date</label>
+                <input type="date" class="form-control datest" id="DropOffDate" name="DropDate" >
+            </div>
+  
+            <div class="form-row ">
+                <label for="Category">Category</label>
+                <select class="form-control text-center" id="Category" name="category">
+                    <option class="ddm2" id="1">Luxury</option>
+                    <option class="ddm2" id="2">Economy</option>
+                    <option class="ddm2" id="3">SUVs</option>
+                    <option class="ddm2" id="4">Mini Buses</option>
+                    <option class="ddm2" id="5">Cabriolets</option>
+                </select>
+            </div>
+  
+            
+          </div>
+  
+          <div class="tab" style="overflow-y: auto;">
+            <div class="form-row">
+              <h3>Car selection</h3>
+
+                <div id="noCarsMessage">
+
+                </div>
+                <div class="container carCards form-row" value="">
+                <!-- According to car category I will put pics and car characteristics here -->
+                
+                  <div class="col-sm-3 carCard" style="display: none;">
+                    <div  class="card border-primary mb-3" style="max-width: 18rem; " >
+                      <div class="card-body">
+                        <img src="" class="card-img-top carImg">
+                        <h5 class="card-title carName"></h5>
+                        <p class=" cardElem doors">DOORS:</p>
+                        {{!-- <p class=" cardElem mpg">MPG: l/100km</p> --}}
+                        <p class=" cardElem passengers">PASSENGERS:</p>
+                        <p class=" cardElem fuel">FUEL:</p>
+                        <p class=" cardElem gears">AUTOMATIC/MANUAL:</p>
+                        <p class=" cardElem ac">AIR-CONDITION:</p>
+                        <p class=" cardElem luggage">LUGGAGE:</p>
+                        <p class=" cardElem price"> € per day</p>
+                        
+                        {{!-- <a href="/booking" class="btn btn-primary" style="float:right;">BOOK NOW</a> --}}
+                        <button class="btn btn-secondary" type="button" onclick="carSelect(0)">Book!</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+
+                  <div class="col-sm-3 carCard" style="display: none;"  >
+                    <div  class="card border-primary mb-3" style="max-width: 18rem; ">
+                      <div class="card-body">
+                        <img src="" class="card-img-top carImg">
+                        <h5 class="card-title carName"></h5>
+                        <p class=" cardElem doors">DOORS:</p>
+                        {{!-- <p class=" cardElem mpg">MPG: l/100km</p> --}}
+                        <p class=" cardElem passengers">PASSENGERS:</p>
+                        <p class=" cardElem fuel">FUEL:</p>
+                        <p class=" cardElem gears">AUTOMATIC/MANUAL:</p>
+                        <p class=" cardElem ac">AIR-CONDITION:</p>
+                        <p class=" cardElem luggage">LUGGAGE:</p>
+                        <p class=" cardElem price"> € per day</p>
+                        
+                        {{!-- <a href="/booking" class="btn btn-primary" style="float:right;">BOOK NOW</a> --}}
+                        <button class="btn btn-secondary" type="button" onclick="carSelect(1)">Book!</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-3 carCard" style="display: none;">
+                    <div  class="card border-primary mb-3" style="max-width: 18rem; ">
+                      <div class="card-body">
+                        <img src="" class="card-img-top carImg">
+                        <h5 class="card-title carName"></h5>
+                        <p class=" cardElem doors">DOORS:</p>
+                        {{!-- <p class=" cardElem mpg">MPG: l/100km</p> --}}
+                        <p class=" cardElem passengers">PASSENGERS:</p>
+                        <p class=" cardElem fuel">FUEL:</p>
+                        <p class=" cardElem gears">AUTOMATIC/MANUAL:</p>
+                        <p class=" cardElem ac">AIR-CONDITION:</p>
+                        <p class=" cardElem luggage">LUGGAGE:</p>
+                        <p class=" cardElem price"> € per day</p>
+                        
+                        <button class="btn btn-secondary" type="button" onclick="carSelect(2)">Book!</button>
+                        {{!-- <a href="/booking" class="btn btn-primary" style="float:right;">BOOK NOW</a> --}}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-3 carCard" style="display: none;">
+                    <div  class="card border-primary mb-3" style="max-width: 18rem; ">
+                      <div class="card-body">
+                        <img src="" class="card-img-to carImg">
+                        <h5 class="card-title carName"></h5>
+                        <p class=" cardElem doors">DOORS:</p>
+                        {{!-- <p class=" cardElem mpg">MPG: l/100km</p> --}}
+                        <p class=" cardElem passengers">PASSENGERS:</p>
+                        <p class=" cardElem fuel">FUEL:</p>
+                        <p class=" cardElem gears">AUTOMATIC/MANUAL:</p>
+                        <p class=" cardElem ac">AIR-CONDITION:</p>
+                        <p class=" cardElem luggage">LUGGAGE:</p>
+                        <p class=" cardElem price"> € per day</p>
+                        
+                        <button class="btn btn-secondary" type="button" onclick="carSelect(3)">Book!</button>
+                        {{!-- <a href="/booking" class="btn btn-primary" style="float:right;">BOOK NOW</a> --}}
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                
+              </div> 
+            </div>   
+          </div>
+  
+          <div class="tab">
+            <div class="form-row ">
+              <h3>Extras</h3>
+  
+            </div>
+  
+            <div class="row">
+              <div class="container extras">
+                <div class="row titleRow">
+                  <h5>In car Extras</h5>
+                </div>
+                <div class="row">
+                  
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input  inCarExtras" type="checkbox" id="Navigator" value="GPS" onclick="extrasFunc()">
+                    <label class="form-check-label" for="Navigator">GPS Navigator</label>
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input  inCarExtras" type="checkbox" id="Satellite radio" value="radio" onclick="extrasFunc()">
+                    <label class="form-check-label" for="Satellite radio">Satellite radio</label>
+                  </div>
+              
+                </div>
+    
+                <div class="row extra_money pt-2">
+                  <p>+ </p>
+                  <p id="extras_money">0.00</p>
+                  <p>$</p>
+                </div>
+    
+              </div>
+    
+              <div class="container extras">
+    
+                <div class="row titleRow">
+                  <h5>Insurance</h5>
+                </div>
+    
+                <div class="row">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input " type="checkbox" id="Standar" value="Standar" disabled checked>
+                    <label class="form-check-label" for="Standar" >Standar</label>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input insurance" type="checkbox" id="Cover_Roadside_Is" value="Roadside" onclick="insuranceFunc()">
+                    <label class="form-check-label" for="Roadside">Cover Roadside Issues</label>
+                  </div>
+                </div>
+    
+                <div class="row mb-4">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input insurance" type="checkbox" id="My_liability" value="RMy_liability"  onclick="insuranceFunc()">
+                    <label class="form-check-label" for="My_liability">Cover My Liability</label>
+                  </div>
+                </div>
+    
+                <div class="row extra_money ">
+                  <p>+ </p>
+                  <p id="insurance_money">10.00</p>
+                  <p>$</p>
+                </div>
+    
+              </div>
+            </div>
+            
+   
+          </div>
+  
+          <div class="tab">
+            <div class="form-row">
+              <h3>Personal Informaton</h3>
+            </div>
+            <div class="form-row">
+              <label for="Fname">First Name</label>
+              <input type="text" class="form-control" id="Fname" placeholder="John" name="Fname" required>
+            
+              <label for="Lname">Last Name</label>
+              <input type="text" class="form-control" id="Lname" placeholder="Doe" name="Lname" required>
+            </div>
+  
+            <div class="form-row">
+              <label for="Email">Email address</label>
+              <input type="email" class="form-control" id="Email"  placeholder="JohnDoe@mail.com" name="email" required>
+            </div>
+  
+            <div class="form-row">
+              <label for="Phone">Phone</label>
+              <input type="tel" class="form-control" id="Phone"  placeholder="123-456-7890" name="phone" required>
+            </div>
+
+            {{!-- <div class='row'> --}}
+              <div> 
+                  <div class="form-row">
+                    <h5>Select payment</h5>
+                  </div>
+        
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment" id="pickuppay" value="pickUpPayment" name="pickPay" checked>
+                    <label class="form-check-label" for="pickuppay" name="pickpayment">
+                      Pay At Pick up
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment" id="epay" value="e-payment" name="Epay">
+                    <label class="form-check-label" for="epay" name="epayment">
+                      Pay now
+                    </label>
+                  </div>
+              </div>
+              
+              <div class="form-check totalp ">
+                <label class="form-check-label" for="totalprice">
+                    Total price:
+                </label>
+                <div class="input-group-append"> 
+                   {{!-- <input type="hidden" class="priceSend" name="totalPrice" value=''></input> --}}
+                   {{!-- <div>
+                      Total price: <span class="input-group-text" name='totalprice' id='totalprice'>{{totalPrice}}</span>
+                      
+                   </div> --}}
+                  <span class="input-group-text" name='totalprice' id='totalprice'></span> 
+                  <span class="input-group-text">€</span>
+                </div>
+                <input type="text" class="priceSend" style="display: none;" id="bookingPrice" name="totalPrice" >
+                <input type="text" class="carModel" style="display: none;" id="bookingModel" name="model" >
+                {{!-- <input class="from-check-input col-xs-2" type="text" name='totalprice' id='totalprice' disabled> --}}
+              </div>
+              
+            </div>
+            
+            
+  
+          {{!-- </div> --}}
+  
+          
+  
+          <div style="overflow:auto;">
+            <div style="float:right;" id="nextprevBtns">
+              <button type="button" class="btn btn-secondary active npbt" id="prevBT" onclick="nextPrev(-1)">Previous</button>
+              <button type="button" class="btn btn-secondary active npbt" id="nextBT" onclick="nextPrev(1)">Next</button>
+            </div>
+          </div>
+  
+        </form>
+      </div>
+    </div>
+    
+
+  <script src="/scripts/bookingjs.js"></script>
+
+</body>
+</html>
+
+
+
+<!-- card
+<div class="col-md-4 mb-3 mb-md-0">
+  <div class="card py-4 h-100">
+    <div class="card-body text-center">
+      
+    </div>
+  </div>
+</div> -->

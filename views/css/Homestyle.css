@@ -1,0 +1,219 @@
+/* for background image */
+
+@media only screen and (max-width: 930px) {
+  .Mainpage{
+      background-image: url("../media/84575.jpg");
+      background-position: center;
+      background-size: 58em 39em;
+      height: 30em;
+      width: 100%;
+
+  }
+}
+
+@media only screen and (max-width: 1460px) and (min-width:930px) {
+  .Mainpage{
+      background-image: url("../media/84575.jpg");
+      background-position: center;
+      background-size: 91em 60em;
+      height: 40em;
+      width: 100%;
+
+  }
+}
+
+@media only screen and (min-width: 1460px) {
+  .Mainpage{
+      background-image: url("../media/84575.jpg");
+      background-position: center;
+      background-size: 120em 80em;
+      height: 50em;
+      width: 100%;
+
+
+  }
+
+  .row{
+    padding-top: 4em;
+  }
+
+}
+
+/* for form position */
+/* 910 me 1180 */
+@media only screen and (min-width: 1460px) {
+  .formPos{
+    margin-left: 45em;
+    /* height: 27em !important; */
+    width: 40% !important;
+  }
+  
+  .form-row{
+    padding: 0.3em 0;
+  }
+}
+@media only screen and (max-width: 1460px) and (min-width:1180px) {
+  .formPos{
+    margin-left: 39em;
+    height: 20em !important;
+    padding-top: 2em;
+    width: 30% !important;
+  }
+}
+
+@media only screen and (max-width: 1180px) and (min-width:990px) {
+  .formPos{
+    margin-left: 30em;
+    height: 18em !important;
+    padding-top: 1.5em;
+    width: 40% !important;
+  }
+}
+
+@media only screen and (max-width: 990px) and (min-width:960px) {
+  .formPos{
+    margin-left: 22em;
+    height: 20em !important;
+    padding-top: 1.5em;
+    width: 60% !important;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .formPos{
+    width: 100% !important;
+    padding-top: 1em;
+  }
+}
+
+
+.mainForm{
+  border-radius: 0.3em;
+}
+
+
+.ddm{
+  background-color: rgba(37, 37, 38,1) !important;
+}
+
+.ddm a{
+  background-color: rgba(37, 37, 38,0.4) !important;
+  color: white !important;
+}
+
+.ddm2{
+  background-color: rgba(37, 37, 38,1) !important;
+  border:0 !important;
+  color: white !important;
+}
+
+select {
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.rgba-gradient {
+    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2) 100%);
+    /* background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 100%));
+    background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 100%); */
+  }
+
+form{
+    color:white;
+}
+
+form select, .datest{
+  background-color: rgba(37, 37, 38,0.8) !important;
+  color: white !important;
+  border: 1px solid rgb(37, 37, 38) !important;
+}
+
+.container-full {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+.footer{
+    background-color: rgba(37, 37, 38,1);
+    
+
+}
+
+.footer .abouttext{
+    color: white;
+}
+
+ .contact-section {
+    padding: 5rem 0 0;
+  }
+  
+   .contact-section .card {
+    border: 0;
+    border-bottom: 0.25rem solid rgb(37, 37, 38);
+  }
+  
+.contact-section .card h4 {
+    font-size: 0.8rem;
+    font-family: 'Varela Round';
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+  }
+  
+  .contact-section .card hr {
+    border-color: rgb(37, 37, 38);
+    border-width: 0.25rem;
+    width: 3rem;
+  }
+  
+  .contact-section .social {
+    margin-top: 5rem;
+  } 
+
+
+  label{
+    text-align: center;
+  }
+
+  .jumbotron{
+    background-color:rgba(0,0,0,0.65);
+    width:350px;
+    margin-top: 40px;
+    border-radius: 1rem;
+    padding:18px;
+  }
+  hr {
+border-top:2px solid white;
+}
+
+
+#indexMessage{
+  margin-top: 0 !important;
+}
+
+.hiname{
+  color:white;
+  align-items: center;
+  float:right;
+  
+}
+
+.welcomename{
+  color: rgba(255,255,255,.5);
+}
+.welcomename:hover{
+  color: rgba(255,255,255,.5);
+}
+
+
+/* .hiname {
+  margin: 0;
+} */
+
+/* .navCont{
+  margin:0;
+} */

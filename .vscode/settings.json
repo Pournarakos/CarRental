@@ -1,0 +1,5 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/adf64d76-2776-42bd-8c4f-3f7de5e01905/resourceGroups/gk802/providers/Microsoft.Web/sites/CarRentalsComplete"
+}

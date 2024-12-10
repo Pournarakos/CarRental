@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoDsmbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0adc034a85.js" crossorigin="anonymous"></script>
+        {{!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> --}}
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </head>
+    <style>
+      body {
+        background-image: url('Road_Background-644.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        image-rendering: inherit;
+        image-rendering: initial;
+        image-rendering: unset;
+      }
+      hr {
+  border-top:1px solid white;
+}
+      .jumbotron {
+    padding: 1rem ;
+    margin-top: 2rem;
+    background-color:rgba(0,0,0,0.7);
+    border-radius: 1rem;
+      }
+      </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container navCont">
+        <a class="navbar-brand" href="#"><h2>Sign Up</h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/signin">Sign In</a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">  
+    <div class="jumbotron">
+      <h4 style="color:white;"><center>Sign up</center><h4><hr>
+        <form action="/formsRoutes/signup" method="POST">
+        {{#if message }}
+              <h4 class="aalert alert-primary mt-4">{{message}}</h4>
+        {{/if}}
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6">
+              <label for="firstname" style="color:white;"><i class="fas fa-user fa-xs"></i></label>
+              <input type="text" name="firstname" class="form-control form-control-sm" id="firstname" required placeholder="First name">
+            </div>
+            <div class="col-sm-6">
+              <label for="lastname" style="color:white;"><i class="fas fa-user fa-xs"></i></label>
+              <input type="text" name="lastname" class="form-control form-control-sm" id="lastname" required placeholder="Last name">
+            </div>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-6">
+            <label for="email" style="color:white;"><i class="fas fa-envelope fa-xs"></i></label>
+            <input type="email" name="email" class="form-control form-control-sm" id="email" placeholder="Email" required>
+          </div>
+          <div class="col-sm-6">
+            <label for="phone" style="color:white;"><i class="fas fa-phone-alt fa-xs"></i></label>
+            <input type="tel"  name="phone" class="form-control form-control-sm" id="phone" placeholder="Phone number" required>
+            </div>
+            </div>
+            </div>
+          <div class="form-group">
+            <div class="row">
+            <div class="col-sm-6">
+            <label for="password" style="color:white;"><i class="fas fa-lock fa-xs"></i></label>
+            <input type="password"  name="password" class="form-control form-control-sm" id="password" placeholder="Password" required>
+          </div>
+          <div class="col-sm-6">
+            <label for="Password_confirm" style="color:white;"><i class="fas fa-check-square fa-xs"></i></label>
+            <input type="password" name="passwordConfirm" class="form-control form-control-sm" id="password_confirm" aria-describedby="password_confirm" placeholder="Confirm Password" required>
+          </div>
+          </div>
+          </div>
+          <button type="submit" class="btn btn-primary form-control form-control-sm">Sign up</button><hr>
+          <a href="/signin"><p class="form-control form-control-sm text-center text-light bg-dark" id="signin">Already Have an Account? Sign in</p></a></label>
+        </form>
+  </div>
+  </div>
+    <div class="col-lg-4"></div>
+    </div>
+  </div>
+</body>
+</html>

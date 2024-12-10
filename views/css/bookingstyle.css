@@ -1,0 +1,168 @@
+ul li{
+    width:15em ;
+    text-align: center;
+    border: 0 !important;
+    
+}
+
+.nav-item{
+    width:6em ;
+}
+
+.extras{
+    border: 1px solid grey;
+    width: 20% !important;
+    height: 12em;
+    line-height: 2em;
+    background-color: white;
+    color:black;
+    padding: 0 1.5em ;
+    border-radius: 1em;
+}
+
+
+.tab{
+    display: none;
+    height: 30em;
+    width: 100%;
+    padding: 0 1em;
+}
+
+#bookNow{
+    padding:0 0.5em ;
+}
+
+.bookingForm{
+    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 100%);
+    color: white;
+}
+
+.progressCont{
+    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.6) , rgba(0, 0, 0, 0.37) );
+    color: white;
+}
+.extras{
+    border:0;
+
+}
+
+select{
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+
+  select option{
+
+    text-align: center;
+  }
+  
+select::-ms-expand {
+    display: none;
+  }
+
+@media only screen and (max-width: 1200px) and (min-width:600px) {
+    .extras{
+        margin:0 auto;
+        width: 22em !important;
+  
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .extras{
+        margin:0;
+        width:13em !important;
+
+  
+    }
+}
+
+  
+
+
+@media only screen and (max-width: 600px) {
+    .formMainpage{
+        background-image: url("../media/7272.jpg");
+        background-position: center;
+        background-size: 80em 60em;
+        height: 60em;
+        width: 100%;
+  
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) and (min-width:600px) {
+    .formMainpage{
+        background-image: url("../media/7272.jpg");
+        background-position: center;
+        background-size: 80em 60em;
+        height: 60em;
+        width: 100%;
+  
+    }
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    .formMainpage{
+        background-image: url("../media/7272.jpg");
+        background-position: center;
+        background-size: 130em 60em;
+        height: 60em;
+        width: 100%;
+  
+    }
+  }
+
+.progressbar li{
+    margin:0 auto;
+    background-color: transparent !important;
+}
+
+.progressbar{
+    margin:0 auto;
+    
+}
+
+/* .npbt{
+    background-color: rgba(58, 83, 155, 1) !important;
+} */
+
+.carCards{
+    color: black;
+    line-height: 0.8em;
+    
+}
+
+img{
+    width:100% ;
+}
+.card{
+    box-shadow:5px 5px 15px rgb(37, 37, 38);
+    border:none !important;
+  }
+  /* .card:hover{
+    background:rgb(37, 37, 38);
+    color:white;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 5px 5px 10px grey;
+  } */
+
+.card-text{
+    font-size: 0.96em !important;
+}
+
+.totalp{
+    float: right;
+}
+
+#totalprice{
+    text-align: center;
+    font-size: 1.07em;
+}
+
+.cardElem{
+    margin-bottom: 0.5em;
+}
