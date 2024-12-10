@@ -1,4 +1,4 @@
-## **Car Rentals**
+### **Car Rentals**
 
 ## **About**  
 This project was created as part of the **Web Programming** course in the **Department of Electrical Engineering and Computer Technology** at the **University of Patras**.
